@@ -1,0 +1,67 @@
+@import "@/scss/variables";
+@import "@/scss/global";
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+
+  background: rgba(255, 255, 255, 0.15);  
+  border-radius: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    left: calc(50% - 100px);
+    bottom: 99px;
+
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    
+    background: #3F77FF;    
+    filter: blur(26px);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: calc(50% - 120px);
+    bottom: -10px;
+
+    width: 34px;
+    height: 34px;    
+    border-radius: 50%;
+
+    background: #0AE0BC;
+    filter: blur(26px);
+  }
+
+  &Text {
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+.bannerBg {
+  position: absolute;
+  z-index: -1;
+  width: 46px;
+  height: 46px;
+
+  left: calc(50% + 80px);
+  bottom: 76px;
+
+  background: linear-gradient(224.25deg, #FF128F 25.68%, #5D2D77 119.34%);
+  filter: blur(26px);
+}

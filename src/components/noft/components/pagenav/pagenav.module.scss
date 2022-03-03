@@ -1,0 +1,132 @@
+@import "@/scss/variables";
+@import "@/scss/global";
+
+.pagenav {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+
+  @media (max-width: 1225px) {
+  }
+
+  @media (max-width: 641px) {
+    gap: 20px;
+  }
+}
+
+.pagenavItem {
+  color: #7388AD;
+  transition: all .2s;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &CurrentOverview,
+  &CurrentStats,
+  &CurrentTrans {
+    position: relative;
+    padding: 0 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 39px;
+    border-bottom: 1px solid #376FDC;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -2.5px;
+      height: 4px;
+      background-color: #376FDC;
+    }
+  }
+
+  &CurrentOverview {
+    &::before {
+      left: calc(50% - 50px);
+      width: 100px;
+    }
+  }
+  
+  &CurrentStats {
+    &::before {
+      left: calc(50% - 37px);
+      width: 74px;
+    }
+  }
+
+  &CurrentTrans {
+    &::before {
+      left: calc(50% - 72px);
+      width: 144px;
+    }
+  }
+}
+
+.pagenavTabs {
+}
+
+.pagenavTab {  
+}
+
+.pagenavTabList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.pagenavTabListItem {
+  flex-shrink: 0  ;
+}
+
+.pagenavLink {
+  position: relative;
+  font-family: $poppins;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #33435F;
+  
+  padding: 5px 14px;
+  border: 1px solid #33435F;
+  border-radius: 2px;
+  
+  transition: all .2s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -3px;
+    z-index: 1;
+    width: 18.5px;
+    height: 11px;
+
+    border-left: 4px solid #33435F;
+    border-top: 4px solid #33435F;
+  }
+
+  
+  &Current {
+    border: 1px solid #376FDC;
+    color: #FFFFFF;
+
+    &::before {
+      border-left: 4px solid #376FDC;
+      border-top: 4px solid #376FDC;
+    }
+  }
+}

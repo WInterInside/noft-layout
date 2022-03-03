@@ -1,0 +1,83 @@
+@import "@/scss/variables";
+@import "@/scss/global";
+
+.offer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 305px;
+  height: 80px;
+  padding: 16px 18px;
+   
+  @media (max-width: 640px) {
+    width: 280px;
+  }
+
+  font-weight: 275;
+  font-size: 18px;
+  line-height: 27px;
+  
+  background-image: url("/public/images/offer-border.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.offerElement{
+  flex-shrink: 1;
+  position: relative;
+  height: 47px;
+  
+  background-color: #33435F;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+  transition: 0.5s;
+
+  &Price {
+    font-weight: 275;
+    z-index: 2;
+    width: 177px;
+    padding-left: 35px;
+    margin-right: -45px;
+    
+    clip-path: polygon(18% 0, 95% 0, 64% 100%, 34% 100%, 0 100%, 0 69%);
+  }
+
+  &Buy {
+    font-weight: bold;
+    z-index: 10;
+    width: 133px;
+    padding-left: 60px;
+    clip-path: polygon(40% 0, 100% 0, 100% 45%, 79% 100%, 0 100%, 0 100%);
+
+    background: linear-gradient(66deg, rgba(193,39,232,1) 0%, rgba(152,31,237,1) 14%, rgba(0,0,255,1) 45%, rgba(37,7,251,1) 68%, rgba(159,32,236,1) 85%, rgba(193,39,232,1) 100%);
+    background-size: 200% auto;
+
+    &:hover {
+      transition: 0.5s;
+      background-position: left 100% center;
+    }
+  }
+}
+
+.offerShadow {
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 42px;
+  z-index: 0;
+  height: 30px;
+
+  opacity: 0;
+  transition: all .2s;
+  
+  width: 55px;
+  box-shadow: 0px 0px 50px rgba(151, 31, 237, 0.993);
+}
+
+.offerElementBuy:hover + .offerShadow {
+  opacity: 1;
+}

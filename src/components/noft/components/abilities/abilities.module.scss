@@ -1,0 +1,657 @@
+@import "@/scss/variables";
+@import "@/scss/global";
+
+.abilitiesBlock {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+  margin-bottom: 100px;
+
+  font-family: $poppins;
+
+  @media (max-width: 1000px) {
+    gap: 60px;    
+    margin-bottom: 47px;
+  }  
+
+  @media (max-width: 640px) {
+    gap: 20px;
+  }  
+
+  &Left,
+  &Right {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+
+    @media (max-width: 1300px) {
+      gap: 135px;
+    } 
+
+    @media (max-width: 1000px) {
+      gap: 30px;
+    }  
+  }
+}
+
+.abilitiesCaption {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 39px;
+
+  @media (max-width: 640px) {
+    text-align: left;
+    font-size: 24px;
+    line-height: 36px;
+  }  
+}
+
+.abilitiesIcon {
+  width: 82px;
+  height: 82px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(-180deg);
+
+  &Power {    
+    background-image: linear-gradient(66.37deg, #00FFE0 -15%, #333399 107.28%);    
+    
+  }
+
+  &Vision {
+    background-image: linear-gradient(66.37deg, #FD5917 -15%, #D435B8 107.28%);
+  }
+
+  &Speed {
+    background-image: linear-gradient(67.84deg, #ED1C24 -1.82%, #FCEC21 106.59%);
+  }
+
+  &Agility {
+    background-image: linear-gradient(67.84deg, #00F260 -1.82%, #0575E6 106.59%);
+  }
+
+  &Vitality {
+    background-image: linear-gradient(66.37deg, #FF00CC -15%, #333399 107.28%);
+  }
+  
+  &Luck {
+    background-image: linear-gradient(66.37deg, #F7FF00 -15%, #DB36A4 107.28%);
+  }
+}
+
+.abilitiesPic {
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  transform: rotate(180deg);
+
+  &Power {    
+    background-image: url("/public/images/power.svg");     
+  }
+
+  &Vision {
+    background-image: url("/public/images/vision.svg");
+  }
+
+  &Speed {
+    background-image: url("/public/images/speed.svg");
+  }
+
+  &Agility {
+    background-image: url("/public/images/agility.svg");
+  }
+
+  &Vitality {
+    background-image: url("/public/images/vitality.svg");
+  }
+  
+  &Luck {
+    background-image: url("/public/images/luck.svg");
+  }
+}
+
+.abilitiesImg {
+  width: 370px;
+  height: 556px;
+  margin: 0 28px;
+
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  border-radius: 35px;
+  margin-bottom: 12px;
+
+  box-shadow: 0px 4px 100px rgba(112, 35, 168, 0.5);
+
+  &Content {
+    position: absolute;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1000px) {
+    display: none;
+  }  
+}
+
+.abilitiesBar {
+  display: flex;
+  margin-top: 13px;
+  gap: 5px;
+
+  &Segment {
+    width: 8px;
+    height: 10px;
+    background-color: #283650;
+    transform: skew(-30deg, 0);
+
+    @media (max-width: 640px) {
+      width: 6px;
+      height: 10px;
+    }  
+  }
+}
+
+.abilitiesValue {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+
+  &Current {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &Cap {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &About {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    align-self: start;
+    background-image: url("/public/images/about.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 1000px) {
+      background-image: url("/public/images/abilities/info.svg");
+    }  
+  }
+}
+
+.abilitiesPower,
+.abilitiesVision,
+.abilitiesSpeed {
+  display: flex;
+  flex-direction: row-reverse;
+
+  @media (max-width: 1000px) {
+    flex-direction: row;
+  }  
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }  
+}
+
+.abilitiesAgility,
+.abilitiesVitality,
+.abilitiesLuck {
+  display: flex;
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }  
+}
+
+// содержимое контента
+
+.abilitiesPower .abilitiesContent {
+  padding-top: 41px;  
+  margin-right: 22px;
+
+  @media (max-width: 1300px) {
+    padding-top: 0;
+    margin-right: 30px;
+  }  
+
+  @media (max-width: 1000px) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 30px;
+  }  
+
+  @media (max-width: 640px) {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 17px;
+  } 
+}
+
+.abilitiesVision .abilitiesContent {
+  margin-top: -10px;
+  margin-right: 22px;
+
+  @media (max-width: 1300px) {
+    margin-top: 0;
+    margin-right: 30px;
+  }  
+
+  @media (max-width: 1000px) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 30px;
+  }  
+
+  @media (max-width: 640px) {
+    margin-top: 17px;
+    margin-right: 0;
+    margin-left: 0;
+  }  
+}
+
+.abilitiesSpeed .abilitiesContent  {
+  margin-top: -41px;  
+  margin-right: 22px;
+
+  @media (max-width: 1300px) {
+    margin-top: 0;
+    margin-right: 30px;
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 30px;
+  }  
+
+  @media (max-width: 640px) {
+    margin-top: 17px;
+    margin-right: 0;
+    margin-left: 0;
+  }    
+}
+
+.abilitiesAgility .abilitiesContent {
+  margin-top: 40px;
+
+  @media (max-width: 1300px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 17px;
+  }    
+}
+
+.abilitiesVitality .abilitiesContent {
+  margin-top: -10px;
+
+  @media (max-width: 1300px) {
+    margin-top: 0;
+  }  
+
+  @media (max-width: 640px) {
+    margin-top: 17px;
+  }  
+}
+
+.abilitiesLuck .abilitiesContent  {
+  margin-top: -41px;
+
+  @media (max-width: 1300px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 17px;
+  }  
+}
+
+.abilitiesContent {  
+  @media (max-width: 640px) {
+    margin-top: 17px;
+  }  
+}
+
+.abilitiesAgility .abilitiesContent .abilitiesCaption,
+.abilitiesVitality .abilitiesContent .abilitiesCaption,
+.abilitiesLuck .abilitiesContent .abilitiesCaption  {
+  align-self: center;
+}
+
+// настройка програссий и значений
+
+.abilitiesAgility .abilitiesContent .abilitiesBar,
+.abilitiesAgility .abilitiesContent .abilitiesValue {
+  margin-left: 90px;
+  
+  @media (max-width: 1300px) {
+    margin-left: 30px;
+  }
+
+  @media (max-width: 640px) {
+    margin-left: 0;
+  }  
+}
+
+.abilitiesVitality .abilitiesContent .abilitiesBar,
+.abilitiesVitality .abilitiesContent .abilitiesValue {
+  margin-left: 60px;
+
+  @media (max-width: 1300px) {
+    margin-left: 30px;
+  }
+
+  @media (max-width: 640px) {
+    margin-left: 0;
+  } 
+}
+
+.abilitiesLuck .abilitiesContent .abilitiesBar,
+.abilitiesLuck .abilitiesContent .abilitiesValue {
+  margin-left: 90px;
+
+  @media (max-width: 1300px) {
+    margin-left: 30px;
+  }
+
+  @media (max-width: 640px) {
+    margin-left: 0;
+  } 
+}
+
+// окрас делений прогрессии
+
+.abilitiesPower .abilitiesContent .abilitiesBar .abilitiesBarSegment {
+  &Colored {
+    background-color: #14AEC4;
+  }
+
+  &Subcolored {
+    background-color: rgba(20, 174, 196, 0.3);
+  }
+}
+
+.abilitiesVision .abilitiesContent .abilitiesBar .abilitiesBarSegment {
+  &Colored {
+    background-color: #EE4C50;
+  }
+
+  &Subcolored {
+    background-color: rgba(238, 76, 80, 0.3);
+  }
+}
+
+.abilitiesSpeed .abilitiesContent .abilitiesBar .abilitiesBarSegment {
+  &Colored {
+    background-color: #F26823;
+  }
+
+  &Subcolored {
+    background-color: rgba(242, 104, 35, 0.3);
+  }
+}
+
+.abilitiesAgility .abilitiesContent .abilitiesBar .abilitiesBarSegment {
+
+  &Colored {
+    background-color: #01D87C;
+  }
+
+  &Subcolored {
+    background-color: #01d87ba1;
+  }
+}
+
+.abilitiesVitality .abilitiesContent .abilitiesBar .abilitiesBarSegment {
+  &Colored {
+    background-color: #7023A8
+  }
+
+  &Subcolored {
+    background-color: #7123a873
+  }
+}
+
+.abilitiesLuck .abilitiesContent .abilitiesBar .abilitiesBarSegment {
+  &Colored {
+    background-color: #EFC430;
+  }
+
+  &Subcolored {
+    background-color: #efc2307c
+  }
+}
+
+// бордеры абилок
+
+.abilitiesPower .abilitiesContent .abilitiesBorder {
+  width: 278px;
+  height: 47px;
+  margin-top: -45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/abilities/power-border.svg");
+}
+
+.abilitiesVision .abilitiesContent .abilitiesBorder {
+  width: 278px;
+  height: 20px;
+  // margin-top: -25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/abilities/vision-border.svg");
+}
+
+.abilitiesSpeed .abilitiesContent .abilitiesBorder {
+  width: 278px;
+  height: 47px;
+  margin-bottom: -45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/abilities/speed-border.svg");
+}
+
+.abilitiesAgility .abilitiesContent .abilitiesBorder {
+  margin-top: -45px;
+  width: 278px;
+  height: 47px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/abilities/agility-border.svg");
+}
+
+.abilitiesVitality .abilitiesContent .abilitiesBorder {
+  width: 278px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/abilities/vitality-border.svg");
+}
+
+.abilitiesLuck .abilitiesContent .abilitiesBorder {
+  width: 278px;
+  height: 47px;
+  margin-bottom: -45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/abilities/luck-border.svg");
+}
+
+.abilitiesContent .abilitiesBorder {
+  @media (max-width: 1300px) {
+    display: none;
+  }
+}
+
+// всплывающая подсказка по абилке
+
+.abilitiesAdvice {  
+  visibility: hidden;
+  transition: all .2s;
+  position: absolute;
+  z-index: 111;
+  width: 170px;
+  border-radius: 3px;
+  top: 40px;
+  right: 68px;
+  padding: 14px 5px 10px 11px;
+  background-color: #1F2B41;
+
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  
+  color: #7388AD;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 10px;
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1F2B41;
+
+    @media (max-width: 1300px) {
+      top: -10px;
+      left: 30px;
+    }  
+
+    @media (max-width: 1000px) {
+      display: none;
+    }  
+  }
+
+  @media (max-width: 1300px) {
+    width: 218px;
+    top: 40px;
+    right: -100px;
+  }  
+
+// -------------------стилизация модалки-------- 
+
+  @media (max-width: 1000px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    background-color: rgba(24, 33, 50, 0.3);
+    backdrop-filter: blur(10px);
+    
+    color: #BED0EF;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 0 70px;
+    justify-content: center;
+    align-items: center;
+    
+    transition: all .2s;
+  }
+}
+
+
+.abilitiesAdviceContent {
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    border-radius: 3px;
+    padding: 35px;  
+    width: 218px;
+    background-color: #2E3E5A;
+  }  
+}
+
+.abilitiesBlockRight  .abilitiesAdvice {
+  right: 0;
+
+  &::before {
+    left: 32px;
+    @media (max-width: 1300px) {
+      top: -10px;
+      left: 130px;
+    }  
+  }
+  
+  @media (max-width: 1000px) {
+    top: 0;
+    left: 0;
+  } 
+}
+
+.abilitiesBlockRight .abilitiesVitality .abilitiesAdvice {
+  right: 10px;
+
+  &::before {
+    left: 10px;
+    @media (max-width: 1300px) {
+      left: 140px;
+    }
+  }
+}
+
+.abilitiesAdvice span{
+  font-weight: bold;  
+  text-transform: uppercase;
+}
+
+.abilitiesValueAbout:hover + .abilitiesAdvice {
+  visibility: visible;
+}
+
+.abilitiesBtn {
+  display: none;
+  @media (max-width: 1000px) {
+    display: flex;
+    margin-top: 11px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 43px;
+    background-color: #415679;
+    border: none;
+  
+    font-family: $lexend;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 0px 32px -5px rgba(0,0,0,0.3);
+    }
+  }  
+}

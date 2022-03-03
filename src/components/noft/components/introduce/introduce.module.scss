@@ -1,0 +1,151 @@
+@import "@/scss/variables";
+@import "@/scss/global";
+
+.introduce {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;  
+  font-family: $poppins;
+
+  margin-bottom: 30px;
+
+  @media (max-width: 1225px) {
+    margin-bottom: 34px;
+    flex-direction: column;
+  }
+
+  &Card {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    @media (max-width: 1225px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 700px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &Avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 135px;
+    width: 120px;
+    border-radius: 20px;
+    margin-right: 30px;
+    background-image: url("/public/images/avatar-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: 700px) {
+      height: 230px;
+      width: 250px;
+      margin-right: 0;
+      margin: 0 auto;
+      margin-bottom: 28px;
+    }
+
+    & img {
+      width: 72px;
+      height: 72px;
+
+      @media (max-width: 700px) {
+        height: 150px;
+        width: 149px;
+      }
+    }
+  }
+
+  &Name {
+    display: flex;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 75px;
+    margin-bottom: 5px;
+
+    @media (max-width: 700px) {
+      justify-content: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &Wrapper {
+    display: flex;
+    text-align: left;
+
+    &Offer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 15px;
+      @media (max-width: 1225px) {
+        margin-top: 30px;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &Supporttext {
+    margin-right: 8px;
+    font-weight: 275;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #7388AD;
+  }
+
+  &Text {
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: none;
+    margin-right: 14px;
+  }
+
+  &Link {
+    display: inline-block;
+    text-align: center;
+    color: #ffffffff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    width: 50px;
+    height: 25px;
+    border-radius: 2px;
+    padding-top: 3px;
+    padding-right: 4px;
+    background-color: #5A23D7;
+
+    clip-path: polygon(82% 0, 100% 50%, 82% 100%, 0 100%, 0 0);
+    transition: all .5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &Owner {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: all .2s;
+
+    &:hover {
+      color: #3F77FF;
+    }
+
+    @media (max-width: 700px) {
+      flex-direction: column-reverse;
+    }
+  }
+}

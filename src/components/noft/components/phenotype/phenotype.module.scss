@@ -1,0 +1,100 @@
+@import "@/scss/variables";
+@import "@/scss/global";
+
+.phenotypeBlock {
+  display: flex;  
+  justify-content: center;
+  gap: 20px;
+  margin-top: 38px;
+  margin-bottom: 238px;
+  text-align: center;
+
+  @media (max-width: 1200px) {   
+    width: 60%;
+    gap: 50px;
+    margin: 38px auto;
+    margin-bottom: 238px;
+    flex-wrap: wrap;
+  }  
+
+  @media (max-width: 640px) {   
+    width: 100%;
+    gap: 20px;
+  }  
+}
+
+.phenotypePreview {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 185px;
+  height: 164px;
+  border-radius: 30px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/phenotype/phenotype-bg.svg");     
+
+
+  @media (max-width: 1440px) {   
+    width: 130px;
+    height: 115px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/public/images/phenotype/phenotype-bg-m.svg");     
+  }  
+
+  &Content {
+    position: relative;
+    width: 65px;
+    height: 57px;
+    border-radius: 5px;
+
+    @media (max-width: 1440px) {   
+      width: 47px;
+      height: 41px;
+    }  
+
+    & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+
+    &Size {
+      background-color: #3F77FF;
+    }
+
+    &Body {
+      background-color: #EE569E;
+    }
+  }
+}
+
+.phenotypeCaption {
+  margin-top: 38px;
+  font-family: $poppins;
+  text-transform: uppercase;
+
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 39px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #7388AD;
+
+  @media (max-width: 1200px) {   
+    margin-top: 23px;
+  }  
+
+  @media (max-width: 640px) {   
+    margin-bottom: 10px;
+  }  
+}
